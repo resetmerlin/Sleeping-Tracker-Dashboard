@@ -1,5 +1,13 @@
+import { Bar, Content, Navigation } from "./view";
+
 function App() {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+  return (
+    <main id="container">
+      <Navigation />
+      <Bar />
+      <Content />
+    </main>
+  );
 }
 
 export default App;
