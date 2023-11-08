@@ -10,13 +10,14 @@ module.exports = {
     "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
     "plugin:prettier/recommended",
+    "plugin:tailwindcss/recommended",
   ],
   overrides: [
     {
       env: {
         node: true,
       },
-      files: [".eslintrc.{js,cjs}"],
+      files: [".eslintrc.{js,cjs}", "*.ts", "*.tsx", "*.js"],
       parserOptions: {
         sourceType: "script",
         project: "./client/tsconfig.json",
