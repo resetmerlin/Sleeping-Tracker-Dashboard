@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { WeatherModel, UserModel } from "../../model/home/HomeModel";
 import { HomeView } from "../../view/page";
+import { data } from "../../../data";
 
 export default function HomeController() {
   const [userModel] = useState(new UserModel(123));
@@ -23,7 +24,5 @@ export default function HomeController() {
       .catch((res) => setWeather(res));
   }, [user, userModel, weatherModel]);
 
-  console.log(weather);
-
-  return <HomeView weather={weather} weatherIcon={weatherIcon} />;
+  return <HomeView weather={weather} weatherIcon={weatherIcon} data={data} />;
 }
