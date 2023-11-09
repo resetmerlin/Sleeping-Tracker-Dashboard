@@ -1,5 +1,5 @@
-import Chart from "../chart/Chart";
-import ChartPie from "../chart/chartPie/ChartPie";
+import { data } from "../../data";
+import { ChartLine, ChartPie } from "../chart";
 
 export default function Content() {
   return (
@@ -19,7 +19,7 @@ export default function Content() {
           </p>
         </div>
 
-        <Chart color="black" />
+        <ChartLine color="black" data={data} />
       </div>
 
       <div
@@ -29,7 +29,7 @@ export default function Content() {
         <span className="rounded-[4rem] border	 px-2		text-3xl">
           Sleep statistics.
         </span>
-        <ChartPie />
+        <ChartPie data={data} />
       </div>
     </div>
   );
