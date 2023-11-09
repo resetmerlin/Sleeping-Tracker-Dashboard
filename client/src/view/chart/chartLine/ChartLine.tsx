@@ -1,16 +1,14 @@
 import {
   Area,
   AreaChart,
-  CartesianGrid,
   ResponsiveContainer,
   Tooltip,
   XAxis,
   YAxis,
 } from "recharts";
-import { data } from "../../data";
-import { CustomTooltip } from "./tooltip";
+import { CustomTooltip } from "..";
 
-export default function Chart({ color = "white" }) {
+export default function ChartLine({ data, color = "white" }) {
   return (
     <ResponsiveContainer width="100%" height="100%">
       <AreaChart
