@@ -1,13 +1,8 @@
-import { Bar, Content, Navigation } from "./view";
+import { RouterProvider } from "react-router-dom";
+import router from "./router/router";
 
 function App() {
-  return (
-    <main id="container">
-      <Navigation />
-      <Bar />
-      <Content />
-    </main>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
