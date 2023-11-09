@@ -14,10 +14,15 @@ import {
 } from "../../components";
 import { Layout } from "../../layout";
 
-export default function HomeView() {
+type IProps = {
+  weather: string | null;
+  weatherIcon: string | null;
+};
+
+export default function HomeView({ weather, weatherIcon }: IProps) {
   return (
     <Layout>
-      <Navigation />
+      <Navigation weather={weather} weatherIcon={weatherIcon} />
       <BarContainer>
         <EcoBar />
         <SearchBar />

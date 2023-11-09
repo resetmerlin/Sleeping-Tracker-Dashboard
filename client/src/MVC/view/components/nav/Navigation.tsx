@@ -1,7 +1,12 @@
 /* eslint-disable jsx-a11y/control-has-associated-label */
 /* eslint-disable tailwindcss/no-custom-classname */
 
-export default function Navigation() {
+type IProps = {
+  weather: string | null;
+  weatherIcon: string | null;
+};
+
+export default function Navigation({ weather, weatherIcon }: IProps) {
   return (
     <div className=" flex	h-32 w-full	justify-evenly	rounded-t-[2rem]	bg-[#F6F6F6] 	text-2xl	">
       <div className="flex w-2/5 items-center	 text-5xl">
@@ -9,8 +14,11 @@ export default function Navigation() {
           <span>09.30</span>
           <span className="text-[#A6A6A6]">PM</span>
         </div>
-
-        <i className="bx bx-sun mx-2 text-5xl" />
+        <img
+          src={`http://openweathermap.org/img/w/${weatherIcon}.png`}
+          alt={`${weather}`}
+        />
+        <span className="text-xl font-light">{weather}</span>
       </div>
 
       <div className="flex h-full items-center justify-center font-medium		">
