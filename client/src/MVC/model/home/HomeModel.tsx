@@ -32,7 +32,9 @@ export class WeatherModel {
 
   async fetchWeater(): Promise<void> {
     const response = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?lat=37.532600&lon=127.024612&appid=3bc51c414cd84cdaaa5aa50ec07aacf0`
+      `https://api.openweathermap.org/data/2.5/weather?lat=37.532600&lon=127.024612&appid=${
+        import.meta.env.VITE_WEATHER_API_KEY
+      }`
     );
     this.data = await response.json();
   }
