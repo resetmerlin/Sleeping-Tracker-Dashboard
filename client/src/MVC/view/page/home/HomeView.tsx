@@ -1,4 +1,3 @@
-import { data } from "../../../../data";
 import {
   BarContainer,
   ChartLine,
@@ -19,7 +18,7 @@ type IProps = {
   weatherIcon: string | null;
 };
 
-export default function HomeView({ weather, weatherIcon }: IProps) {
+export default function HomeView({ weather, weatherIcon, data }: IProps) {
   return (
     <Layout>
       <Navigation weather={weather} weatherIcon={weatherIcon} />
@@ -38,9 +37,7 @@ export default function HomeView({ weather, weatherIcon }: IProps) {
         <ContentLeft>
           <ChartLine color="black" data={data} />
         </ContentLeft>
-        <ContentTopRight>
-          <ChartPie data={data} />
-        </ContentTopRight>
+        <ContentTopRight>{/* <ChartPie data={data} /> */}</ContentTopRight>
       </ContentContainer>
     </Layout>
   );
